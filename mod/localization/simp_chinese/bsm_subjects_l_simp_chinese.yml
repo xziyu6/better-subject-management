@@ -1,2 +1,2 @@
 ﻿l_simp_chinese:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "对于与 [SCOPE.sCountry('target_country').GetName] 拥有相同地区拥有战略利益的每个直属 [concept_subject]，其 [concept_liberty_desire] 增加 [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "对于与 [SCOPE.sCountry('target_country').GetName] 在相同地区拥有战略利益的每个直属 [concept_subject]，其 [concept_liberty_desire] 增加 [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"

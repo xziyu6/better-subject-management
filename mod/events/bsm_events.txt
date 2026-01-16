@@ -1,0 +1,9 @@
+namespace = bsm_error_suppression
+
+bsm_error_suppression.0001 = {
+  hidden = yes
+  orphan = yes
+  trigger = {
+    exists = global_var:bsm_is_loaded
+  }
+}
