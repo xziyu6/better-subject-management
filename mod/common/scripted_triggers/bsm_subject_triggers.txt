@@ -1,0 +1,32 @@
+# Better Subject Management - Scripted Triggers
+# Checks if two countries have overlapping strategic interests
+bsm_has_overlapping_strategic_interests = {
+	# ROOT = subject checking for overlapping interests
+	# $TARGET$ = the subject that had autonomy reduced
+	# Check if ROOT has interest markers in any region where TARGET owns states
+	any_interest_marker = {
+		save_temporary_scope_as = root_marker
+		$TARGET$ = {
+			any_scope_state = {
+				region = scope:root_marker.region
+			}
+		}
+	}
+}
+
+bsm_has_shared_strategic_region = {
+	# ROOT = subject being evaluated
+	# $TARGET$ = subject that had autonomy changed
+	# Alternative implementation: check if they own states in the same strategic regions
+	any_scope_state = {
+		save_temporary_scope_value_as = {
+			name = root_region
+			value = region
+		}
+		$TARGET$ = {
+			any_scope_state = {
+				region = scope:root_region
+			}
+		}
+	}
+}

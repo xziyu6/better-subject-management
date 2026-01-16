@@ -1,13 +1,117 @@
-# Overview
-This is a template to create a new repository for a Victoria 3 mod.
+# Better Subject Management
 
-# Content
-- [Setup](#setup)
-  - [Creating your own Repository](#creating-your-own-repository)
-  - [Checkout your new Repository](#checkout-your-new-repository)
-  - [Adjusting Mod Metadata](#adjusting-mod-metadata)
-  - [Open the Launcher](#open-the-launcher)
-  - [Final Adjustments](#final-adjustments)
+A Victoria 3 mod that makes subject management more strategic and less exponentially punishing.
+
+## Features
+
+### Strategic Liberty Desire System
+
+In vanilla Victoria 3, when you decrease the autonomy of any subject, **ALL** other subjects gain +10 liberty desire, making empire management exponentially harder as you acquire more subjects.
+
+This mod changes the mechanic so that **only subjects with strategic interests in the same regions** as the targeted subject will increase their liberty desire. This creates a more strategic and geographically-aware subject management system.
+
+### How It Works
+
+When you reduce a subject's autonomy, other subjects will only gain liberty desire (+10) if they meet one of these conditions:
+
+1. They have an **interest marker** in a strategic region where the targeted subject owns states
+2. They **own states** in the same strategic region as the targeted subject
+
+This means:
+- ✅ A subject in India will care if you reduce autonomy of another subject in India
+- ✅ A subject interested in China will care if you reduce autonomy of a Chinese subject
+- ❌ A subject in Africa won't care about autonomy changes in South America
+- ❌ A subject with no regional overlap won't be affected
+
+## Compatibility
+
+- **Game Version:** Victoria 3 v1.12.x
+- **Mod Type:** Replaces diplomatic action using 1.12 modding system
+- **Multiplayer:** Yes (synchronized)
+- **Achievements:** Compatible (Victoria 3 doesn't disable achievements with mods)
+
+## Installation
+
+### Steam Workshop (Recommended)
+*Coming soon*
+
+### Manual Installation
+
+1. Download or clone this repository
+2. Copy the `mod` folder contents to:
+   ```
+   Documents\Paradox Interactive\Victoria 3\mod\better-subject-management\
+   ```
+3. Enable the mod in the Victoria 3 launcher
+4. Start a new game or load an existing save
+
+## Technical Details
+
+### Files Modified
+- `common/diplomatic_actions/bsm_subjects_decrease_autonomy.txt` - Replaces `da_decrease_autonomy`
+- `common/scripted_triggers/bsm_subject_triggers.txt` - Helper triggers for regional checks
+- `localization/english/bsm_subjects_l_english.yml` - Custom tooltip text
+
+### Script Logic
+
+The mod uses Victoria 3's strategic region system to determine overlapping interests:
+
+```vic3
+# Check for interest markers in target's regions
+any_interest_marker = {
+    scope:target_country = {
+        any_scope_state = {
+            region = scope:checking_marker.region
+        }
+    }
+}
+
+# OR check for states in same regions
+any_scope_state = {
+    scope:target_country = {
+        any_scope_state = {
+            region = scope:subject_region
+        }
+    }
+}
+```
+
+## Development
+
+This mod uses the Victoria 3 v1.12+ modding system with REPLACE/INJECT keywords.
+
+### Building from Source
+
+The mod is already in the correct structure. Just copy the `mod` folder to your Victoria 3 mod directory.
+
+### Testing
+
+1. Enable debug mode: Launch with `-debug_mode` flag
+2. Use console commands to test scenarios
+3. Check `error.log` in `Documents\Paradox Interactive\Victoria 3\logs\`
+
+## Changelog
+
+### v1.0.0 (Initial Release)
+- Implemented strategic region-based liberty desire system
+- Only affected subjects with overlapping regional interests increase liberty desire
+- Full 1.12 compatibility using REPLACE keyword
+
+## Credits
+
+- Developed by xziyu6
+- Thanks to the Victoria 3 modding community for documentation and examples
+
+## License
+
+This mod is released under the MIT License. See LICENSE file for details.
+
+## Support
+
+If you encounter any issues:
+1. Check the `error.log` file
+2. Verify you're using Victoria 3 v1.12 or later
+3. Report issues on GitHub with your error.log and game version
 - [Folder Structure](#folder-structure)
 - [Further Resources](#further-resources)
 
