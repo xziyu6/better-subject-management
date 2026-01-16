@@ -1,0 +1,2 @@
+﻿l_german:
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "Erhöht [concept_liberty_desire] in jedem anderen direkten [concept_subject] mit strategischen Interessen in denselben Regionen wie $TARGET|Y$ um [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"

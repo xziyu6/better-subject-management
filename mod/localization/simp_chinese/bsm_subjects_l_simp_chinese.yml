@@ -1,0 +1,2 @@
+﻿l_simp_chinese:
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "在与 $TARGET|Y$ 相同地区拥有战略利益的每个直属 [concept_subject] 的 [concept_liberty_desire] 增加 [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"
