@@ -1,2 +1,0 @@
-﻿l_korean:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "$TARGET|Y$와 같은 지역에 전략적 이익을 가진 각 직속 [concept_subject]의 [concept_liberty_desire]를 [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0] 증가"

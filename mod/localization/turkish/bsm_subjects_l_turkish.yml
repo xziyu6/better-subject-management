@@ -1,2 +1,0 @@
-﻿l_turkish:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "$TARGET|Y$ ile aynı bölgelerde stratejik çıkarlara sahip her diğer doğrudan [concept_subject] için [concept_liberty_desire] değerini [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0] artırır"

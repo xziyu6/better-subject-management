@@ -1,6 +1,4 @@
-# Better Subject Management - Modified Decrease Autonomy Action
-# Only subjects with interests in the same strategic regions as the target get liberty desire increase
-REPLACE:da_decrease_autonomy = {
+﻿REPLACE:da_decrease_autonomy = {
 	groups = {
 		overlord
 	}
@@ -62,35 +60,16 @@ REPLACE:da_decrease_autonomy = {
 		}
 		# Modified: Only add liberty desire to subjects with overlapping strategic interests
 		custom_tooltip = {
+            scope:target_country = {
+                save_scope_as = target_country
+            }
 			text = "BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS"
 			every_direct_subject = {
 				limit = {
 					NOT = {
 						this = scope:target_country
 					}
-					OR = {
-						# Check if this subject has interest markers in regions where target owns states
-						any_interest_marker = {
-							save_temporary_scope_as = checking_marker
-							scope:target_country = {
-								any_scope_state = {
-									region = scope:checking_marker.region
-								}
-							}
-						}
-						# OR check if they own states in the same strategic regions
-						any_scope_state = {
-							save_temporary_scope_value_as = {
-								name = subject_region
-								value = region
-							}
-							scope:target_country = {
-								any_scope_state = {
-									region = scope:subject_region
-								}
-							}
-						}
-					}
+					has_overlapping_interests = scope:target_country
 				}
 				add_liberty_desire = decrease_autonomy_liberty_desire_to_add
 			}

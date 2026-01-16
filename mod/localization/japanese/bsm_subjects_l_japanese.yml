@@ -1,2 +1,0 @@
-﻿l_japanese:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "$TARGET|Y$と同じ地域に戦略的利益を持つ各直属[concept_subject]の[concept_liberty_desire]を[SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]増加させる"
