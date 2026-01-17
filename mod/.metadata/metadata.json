@@ -5,10 +5,10 @@
   "game_id": "victoria3",
   "picture": "thumbnail.png",
   "supported_game_version": "1.12.*",
-  "short_description": "Makes subject management more strategic - only subjects with interests in the same regions get liberty desire penalties",
+  "short_description": "A mod for Victoria 3 that improves subject management, as currently this can be very time-consuming and irritating",
   "tags": [
     "Gameplay",
-    "Balance",
+    "Diplomacy",
     "1.12"
   ],
   "relationships": [],
