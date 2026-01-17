@@ -1,5 +1,4 @@
-namespace = bsm_error_suppression
-
+﻿namespace = bsm_error_suppression
 bsm_error_suppression.0001 = {
   hidden = yes
   orphan = yes

@@ -1,2 +1,2 @@
 ﻿l_english:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "Increases [concept_liberty_desire] in all other direct [concept_subject]s with strategic interests in the same regions as [SCOPE.sCountry('target_country').GetName] by [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "Increases [concept_liberty_desire] for each other [concept_subject] that holds an [concept_interest] in the [concept_strategic_region] of [SCOPE.sCountry('target_country').GetName]'s capital by [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"
