@@ -1,0 +1,2 @@
+﻿l_braz_por:
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "Aumenta o [concept_liberty_desire] de cada outro [concept_subject] que tenha um [concept_interest] na [concept_strategic_region] da capital de [SCOPE.sCountry('target_country').GetName] em [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]."

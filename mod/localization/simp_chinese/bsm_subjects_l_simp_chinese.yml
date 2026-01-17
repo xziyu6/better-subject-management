@@ -1,2 +1,2 @@
 ﻿l_simp_chinese:
-  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "其他所有在[SCOPE.sCountry('target_country').GetName]的首都所在[concept_strategic_region]拥有[concept_interest]的直属 [concept_subject]的[concept_liberty_desire]提高[SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]"
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "使在 [SCOPE.sCountry('target_country').GetName] 的首都所在[concept_strategic_region] 拥有[concept_interest] 的其他[concept_subject] 的[concept_liberty_desire] 提高 [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]。"

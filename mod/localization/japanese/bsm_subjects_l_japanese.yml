@@ -1,0 +1,2 @@
+﻿l_japanese:
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "[SCOPE.sCountry('target_country').GetName]の首都がある[concept_strategic_region]に[concept_interest]を持つ他のすべての[concept_subject]の[concept_liberty_desire]を[SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0]増加させます。"

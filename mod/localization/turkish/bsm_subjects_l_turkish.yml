@@ -1,0 +1,2 @@
+﻿l_turkish:
+  BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS: "[SCOPE.sCountry('target_country').GetName]'nın başkentinin bulunduğu [concept_strategic_region]'de [concept_interest]'e sahip diğer tüm [concept_subject]'lerin [concept_liberty_desire]'sini [SCOPE.ScriptValue('decrease_autonomy_liberty_desire_to_add')|bo0] arttırır."
