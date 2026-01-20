@@ -1,0 +1,4 @@
+bsm_peaceful_annex_subject_base_liberty_desire_change = {
+  add = annex_subject_base_liberty_desire_change
+  multiply = 0.5
+}

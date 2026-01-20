@@ -1,4 +1,4 @@
-﻿REPLACE:da_decrease_autonomy = {
+﻿REPLACE_OR_CREATE:da_decrease_autonomy = {
   groups = {
     overlord
   }
@@ -63,13 +63,9 @@
       text = "BSM_ADD_LIBERTY_DESIRE_TO_INTERESTED_SUBJECTS"
       every_direct_subject = {
         limit = {
-          AND = {
-            NOT = {
-              this = scope:target_country
-            }
+            NOT = { this = scope:target_country }
             # has_overlapping_interests = scope:target_country
             has_interest_marker_in_region = scope:target_country.capital.region
-          }
         }
         add_liberty_desire = decrease_autonomy_liberty_desire_to_add
       }

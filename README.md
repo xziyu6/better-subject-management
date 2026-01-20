@@ -4,7 +4,9 @@ A mod for Victoria 3 that improves subject management, as currently this can be 
 
 ## Features
 
-- Increase in liberty desire of all other subjects when the autonomy of one gets reduced now applies only to other subjects with interests in the capital region of the autonomy reduction target
+- Reducing autonomy or annexing a subject now only increases liberty desire of other subjects with interests in the capital region of that subject (applies to flat increase and monthly increase)
+- Peaceful annexation of subjects causes half the flat liberty desire increase and no monthly modifier to other subjects
+- Removes the 75% limit on acceptance of peaceful subject annexation
 
 ## Compatibility
 
@@ -15,6 +17,10 @@ A mod for Victoria 3 that improves subject management, as currently this can be 
 ## Localization
 
 Localized for all languages supported by the game. But localization for languages other than English and Chinese are AI generated and haven't been revised, I welcome any corrections if there are mistakes.
+
+## Sources
+This mod includes revised versions of the following mods. Please disable them or load this mod after them, otherwise some features won't be applied. (But probably won't cause bugs, not sure)
+https://steamcommunity.com/sharedfiles/filedetails/?id=3624754936
 
 ## Contributing
 
